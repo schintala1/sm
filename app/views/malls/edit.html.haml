@@ -1,0 +1,11 @@
+%h1 Malls#edit
+%h2 Edit Mall information
+%p Find me in app/views/malls/edit.html.haml
+= form_tag mall_path(@mall), :method => :put do
+  = label :mall, :name, 'Name'
+  = text_field :mall, :name
+  = label :mall , :location, 'Location' 
+  = text_field :mall, :location
+  = label :mall, :phone, 'Phone'
+  = text_field :mall, :phone
+  = submit_tag 'Save changes'

@@ -1,0 +1,11 @@
+%h1 Malls#new
+%p Find me in app/views/malls/new.html.haml
+%h2 Create a new Mall
+= form_tag malls_path, :method => :post do
+  = label :mall, :name, 'Name'
+  = text_field :mall, :name
+  = label :mall , :location, 'Location' 
+  = text_field :mall, :location
+  = label :mall, :phone, 'Phone'
+  = text_field :mall, :phone
+  = submit_tag 'Save changes'

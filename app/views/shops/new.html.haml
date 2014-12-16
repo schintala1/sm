@@ -1,0 +1,12 @@
+%h1 Shops#new
+%p 
+="Adding a new shop to " + @mall.name + " album" 
+%h2 Create a new Shop
+= form_tag mall_shops_path(@mall), :method => :post do
+  = label :shop, :name, 'Name'
+  = text_field :shop, :name
+  = label :shop , :floor, 'Floor' 
+  = text_field :shop, :floor
+  = label :shop, :category, 'Category'
+  = text_field :shop, :category
+  = submit_tag 'Save changes'

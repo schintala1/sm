@@ -1,0 +1,18 @@
+%h1 Shops#index
+%p 
+="Shops from " + @mall.name + " mall" 
+%table#shops
+  %thead
+    %tr
+      %th Name
+      %th Floor
+      %th Category
+    %tbody
+      - @shops.each do |shop|
+        %tr
+          %td= shop.name
+          %td= shop.floor
+          %td= shop.category
+          %td= link_to "Edit shop information", edit_mall_shop_path(shop.mall, shop)
+=link_to 'Add new shop', new_mall_shop_path(@mall)
+

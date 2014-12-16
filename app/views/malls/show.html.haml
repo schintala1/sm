@@ -1,0 +1,11 @@
+%h2 Details about #{@mall.name}
+%ul#details
+  %li
+    Location:
+    = @mall.location
+  %li
+    Phone:
+    =@mall.phone
+=link_to 'Edit mall information', edit_mall_path(@mall)
+=link_to 'Back to malls list', malls_path
+

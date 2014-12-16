@@ -1,0 +1,19 @@
+%h1 All Malls
+%p Find me in app/views/malls/index.html.haml
+%table#malls
+  %thead
+    %tr
+      %th Name
+      %th Location
+      %th Phone
+      %th more info
+      %th shops
+    %tbody
+      - @malls.each do |mall|
+        %tr
+          %td= mall.name
+          %td= mall.location
+          %td= mall.phone
+          %td= link_to "More about #{mall.name} mall", mall_path(mall)
+          %td= link_to "View shops", mall_shops_path(mall)
+=link_to 'Add new mall', new_mall_path
